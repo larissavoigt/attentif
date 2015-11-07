@@ -4,22 +4,29 @@
 	<script type="text/javascript" src="../assets/js/home.js"></script>
 	<link rel="stylesheet" href="../assets/css/main.css">
 	</head>
-	
+
   <body>
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       {{template "header" }}
 		<main class="mdl-layout__content">
 			<div class="page-content"><!-- Your content goes here -->
-			
+
 			<h4 class="title-text">How are you feeling today?</h4>
 				<div class="supporting-text">
 					<!-- The slider that allows the user to select how happy he or she is-->
 					<div id="output_happiness" class="centered cast-text-shadow"></div>
 					<input id="control_happiness" class="mdl-slider mdl-js-slider centered" type="range" min="0" max="100" value="50" tabindex="0" oninput="update_happiness();"/>
 				</div>
+			<h4 class="title-text">How many hours have you slept today?</h4>
+			  <div id="output_sleeping" class="centered cast-text-shadow">
+					<!-- The slider that indicates how many hours has the user has slept--->
+					<input id="control_sleeping" class="mdl-slider mdl-js-slider centered" step="1" type="range" min="0" max="24" value="0" onchange="hoursSlept.value=value" tabindex="0">
+					<output class="mdl-slider mdl-js-slider" id="hoursSlept"></output>
+			  </div>
+
 			</div>
 		</main>
 		</div>
 	</body>
-	
+
 </html>
