@@ -1,0 +1,106 @@
+.centered{
+	margin: 0 auto;
+	text-align: center;
+}
+
+.cast-text-shadow{
+		text-shadow: 1px 1px 1px #555555;
+}
+
+/* HEADER */
+h1, .mdl-layout-title {
+  font-family: 'Lobster Two', cursive;
+  font-size: 28px;
+}
+
+.mdl-layout__header-row .mdl-layout-title {
+  color: white;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+/* Controlls*/
+
+.control_happy {
+	 background-image: url("happy.png");
+}
+
+.control_angry {
+   background-image: url("angry.png");
+}
+
+.control_apathy {
+   background-image: url("apathy.png");
+}
+
+.control_bored {
+   background-image: url("bored.png");
+}
+
+.control_confident {
+   background-image: url("confident.png");
+}
+
+.control_confused {
+   background-image: url("confused.png");
+}
+
+.control_embarrassed {
+   background-image: url("embarrassed.png");
+}
+
+.control_entertained {
+   background-image: url("entertained.png");
+}
+
+.control_euphoria {
+   background-image: url("euphoria.png");
+}
+
+.control_excited {
+   background-image: url("excited.png");
+}
+
+.control_frustrated {
+   background-image: url("frustrated.png");
+}
+
+.control_hopefull {
+   background-image: url("hopefull.png");
+}
+
+.control_joyful {
+   background-image: url("joyful.png");
+}
+
+.control_lost {
+   background-image: url("lost.png");
+}
+
+.control_optimistic {
+   background-image: url("optimistic.png");
+}
+
+.control_peacefull {
+   background-image: url("peacefull.png");
+}
+
+.control_sad {
+   background-image: url("sad.png");
+}
+
+.control_shoked {
+   background-image: url("shoked.png");
+}
+
+.control_sleepy {
+   background-image: url("sleepy.png");
+}
+
+.control_tired {
+   background-image: url("tired.png");
+}
+
+
+
+
+
