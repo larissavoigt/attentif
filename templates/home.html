@@ -20,8 +20,8 @@
 			<h4 class="title-text">How many hours have you slept today?</h4>
 			  <div id="output_sleeping" class="centered cast-text-shadow">
 					<!-- The slider that indicates how many hours has the user has slept--->
-					<input id="control_sleeping" class="mdl-slider mdl-js-slider centered" step="1" type="range" min="0" max="24" value="0" onchange="hoursSlept.value=value" tabindex="0">
-					<output class="mdl-slider mdl-js-slider" id="hoursSlept"></output>
+					<input id="control_sleeping" class="mdl-slider mdl-js-slider centered" step="1" type="range" min="0" max="24" value="0" oninput="hoursSlept.value=value" tabindex="0">
+					<output class="mdl-slider mdl-js-slider" id="hoursSlept">0</output>
 			  </div>
 
 			</div>
