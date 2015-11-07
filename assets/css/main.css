@@ -7,7 +7,13 @@
 		text-shadow: 1px 1px 1px #555555;
 }
 
+/* HEADER */
 h1, .mdl-layout-title {
   font-family: 'Lobster Two', cursive;
   font-size: 28px;
+}
+
+.mdl-layout__header-row .mdl-layout-title {
+  color: white;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
 }
