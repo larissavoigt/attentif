@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"log"
 	"net/http"
 
 	"golang.org/x/net/context"
@@ -13,6 +14,8 @@ import (
 	"github.com/dementiahackers/attentif/internal/user"
 	"github.com/rs/xhandler"
 )
+
+const demo_id = "1"
 
 var (
 	domain = flag.String("domain", "http://localhost", "Site domain")
@@ -95,6 +98,11 @@ func main() {
 		http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
 	})
 
+	http.HandleFunc("/demo", func(w http.ResponseWriter, r *http.Request) {
+		auth.SaveSession(w, demo_id)
+		http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
+	})
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method == "GET" {
 			if r.URL.Path != "/" {
@@ -117,5 +125,5 @@ func main() {
 		}
 	})
 
-	http.ListenAndServe(":"+*port, nil)
+	log.Fatal(http.ListenAndServe(":"+*port, nil))
 }
