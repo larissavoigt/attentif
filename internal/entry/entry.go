@@ -12,3 +12,7 @@ type Entry struct {
 	Description sql.NullString
 	CreatedAt   time.Time
 }
+
+func (e *Entry) Timestamp() string {
+	return e.CreatedAt.Format("Jan 2, 3:04pm")
+}
