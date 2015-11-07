@@ -1,0 +1,17 @@
+.fb_bt{
+	background: url('../imgs/fb_button_sheet.png') 0px 0px no-repeat;
+	width: 75px;
+	height: 25px;
+	display: block;
+}
+
+.fb_bt:hover{
+	background: url('../imgs/fb_button_sheet.png') 0 -25px no-repeat;
+	width: 75px;
+	height: 25px;
+	display: block;
+}
+
+
+
+
