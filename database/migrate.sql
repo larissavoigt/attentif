@@ -6,4 +6,17 @@ USE attentif;
 
 CREATE TABLE users(
   id INT UNSIGNED NOT_NULL AUTO_INCREMENT PRIMARY KEY,
-)
+  facebook_id VARCHAR(30) NOT NULL UNIQUE,
+  token TEXT NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  INDEX(facebook_id))
+);
+
+CREATE TABLE entries(
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id INT UNSIGNED NOT NULL,
+  rate INT UNSIGNED NOT NULL,
+  description TEXT,
+  created_at TIMESTAMP NOT NULL,
+  FOREIGN KEY(user_id) REFERENCES users(id))
+);
