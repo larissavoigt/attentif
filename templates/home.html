@@ -1,6 +1,7 @@
 <html>
 	<head>
     {{template "head"}}
+	<script type="text/javascript" src="../assets/js/home.js"></script>
 	</head>
 	
 	<body
@@ -34,7 +35,9 @@
 			
 			<h4 class="title-text">How are you feeling today?</h4>
 				<div class="supporting-text">
-					The controls go here 
+					<!-- The slider that allows the user to select how happy he or she is-->
+					<div id="output_happiness"></div>
+					<input id="control_happiness" class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="50" tabindex="0" oninput="update_happiness();"/>
 				</div>
 			</div>
 		</main>
