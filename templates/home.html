@@ -2,6 +2,7 @@
 	<head>
     {{template "head"}}
 	<script type="text/javascript" src="../assets/js/home.js"></script>
+	<link rel="stylesheet" href="../assets/css/main.css">
 	</head>
 	
 	<body
@@ -31,16 +32,17 @@
 			</nav>
 		</div>
 		<main class="mdl-layout__content">
-			<div class="page-content><!-- Your content goes here -->
+			<div class="page-content"><!-- Your content goes here -->
 			
 			<h4 class="title-text">How are you feeling today?</h4>
 				<div class="supporting-text">
 					<!-- The slider that allows the user to select how happy he or she is-->
-					<div id="output_happiness"></div>
+					<div id="output_happiness" class=""></div>
 					<input id="control_happiness" class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="50" tabindex="0" oninput="update_happiness();"/>
 				</div>
 			</div>
 		</main>
 		</div>
 	</body>
+	
 </html>
