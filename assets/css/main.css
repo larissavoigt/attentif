@@ -1,8 +1,13 @@
 .centered{
 	margin: 0 auto;
-	text-align: center; 
+	text-align: center;
 }
 
 .cast-text-shadow{
 		text-shadow: 1px 1px 1px #555555;
+}
+
+h1, .mdl-layout-title {
+  font-family: 'Lobster Two', cursive;
+  font-size: 28px;
 }
