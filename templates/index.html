@@ -3,43 +3,33 @@
   <head>
     {{template "head"}}
     <title>Attentif - Helping Individuals with dementia record their days</title>
-	<link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
   </head>
   <body>
-  
-    <div>
-      <a href="/demo">Try a demo</a>
-    </div>
-    
+
     <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-          <span class="mdl-layout-title">Attentif</span>
-        </div>
-      </header>
       <main class="mdl-layout__content">
-        <div class="page-content">
-        
+      <div class="page-content">
+
         <div class="mdl-layout-spacer .top"></div>
         <div class="mdl-grid">
-            <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-shadow--2dp centered">
-                 <div class="mdl-card__title">
-                 <h1 class="mdl-card__title-text centered">Welcome to <strong>Attentif</strong></h1>
-                 </div>
-            
-            <div class="mdl-card__supporting-text"> 
-                <p align="centered">Click the button below to login with your Facebook account!</p>
-                <div class="centered"><a class="fb_bt centered" href="{{.FacebookURL}}"></a></div>
+          <div class="mdl-card mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-shadow--2dp centered">
+            <div class="mdl-card__supporting-text">
+              <img src="/assets/imgs/logo.png" alt="logo" />
+              <div class="centered">
+                <a class="fb_bt centered" href="{{.FacebookURL}}">
+                  <img src="/assets/imgs/fblogin.png" alt="" />
+                </a>
+              </div>
+              <div class="centered">
+                <a href="/demo">Try a demo</a>
+              </div>
             </div>
           </div>
-         </div>
-        
         </div>
+      </div>
       </main>
     </div>
-    
-    
   </body>
 </html>
