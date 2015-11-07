@@ -18,6 +18,7 @@ h1, .mdl-layout-title {
   text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
 }
 
+
 .mdl-layout__drawer i.material-icons {
   vertical-align: bottom;
 }
@@ -29,3 +30,102 @@ h1, .mdl-layout-title {
 .mdl-layout__header-row .mdl-navigation i.material-icons {
   vertical-align: middle;
 }
+
+/* Controlls*/
+
+.moods {
+	background-repeat: no-repeat;
+	background-size: 5em 5em;
+	width:6em; height:6em;
+	display: float;
+	padding: 0 0 0 2em;
+	border-radius: 0;
+	font-weight: bold; 
+	font-size: 1.2em;
+}
+
+#control_happy {
+	background-image: url("../imgs/happy.png");
+	margin-left: 1em;
+}
+
+#control_angry {
+   background-image: url("../imgs/angry.png");
+}
+
+#control_apathy {
+   background-image: url("../imgs/apathy.png");
+}
+
+#control_bored {
+   background-image: url("../imgs/bored.png");
+}
+
+#control_confident {
+   background-image: url("../imgs/confident.png");
+}
+
+#control_confused {
+   background-image: url("../imgs/confused.png");
+}
+
+#control_embarrassed {
+   background-image: url("../imgs/embarrassed.png");
+}
+
+#control_entertained {
+   background-image: url("../imgs/entertained.png");
+}
+
+#control_euphoria {
+   background-image: url("../imgs/euphoria.png");
+}
+
+#control_excited {
+   background-image: url("../imgs/excited.png");
+}
+
+#control_frustrated {
+   background-image: url("../imgs/frustrated.png");
+}
+
+#control_hopefull {
+   background-image: url("../imgs/hopefull.png");
+}
+
+#control_joyful {
+   background-image: url("../imgs/joyful.png");
+}
+
+#control_lost {
+   background-image: url("../imgs/lost.png");
+}
+
+#control_optimistic {
+   background-image: url("../imgs/optimistic.png");
+}
+
+#control_peacefull {
+   background-image: url("../imgs/peacefull.png");
+}
+
+#control_sad {
+   background-image: url("../imgs/sad.png");
+}
+
+#control_shoked {
+   background-image: url("../imgs/shoked.png");
+}
+
+#control_sleepy {
+   background-image: url("../imgs/sleepy.png");
+}
+
+#control_tired {
+   background-image: url("../imgs/tired.png");
+}
+
+
+
+
+
