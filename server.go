@@ -2,11 +2,15 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"net/http"
+
+	"golang.org/x/net/context"
 
 	"github.com/dementiahackers/attentif/internal/auth"
 	"github.com/dementiahackers/attentif/internal/db"
 	"github.com/dementiahackers/attentif/internal/templates"
+	"github.com/dementiahackers/attentif/internal/user"
 	"github.com/rs/xhandler"
 )
 
@@ -50,6 +54,41 @@ func main() {
 			}
 		}
 	})
+
+	http.Handle("/entries/", c.Handler(
+		xhandler.HandlerFuncC(func(ctx context.Context, w http.ResponseWriter, r *http.Request) {
+			u := ctx.Value("user").(*user.User)
+
+			switch r.Method {
+			case "GET":
+
+				switch r.URL.Path[len("/entries/"):] {
+				case "":
+					entries, err := db.FindEntries(u.ID, 20)
+					if err != nil {
+						tpl.Error(w, err)
+					} else {
+						tpl.Render(w, "entries", entries)
+					}
+				case "new":
+					tpl.Render(w, "home", u)
+				default:
+					fmt.Fprintf(w, "missing!")
+				}
+
+			case "POST":
+				rate := r.FormValue("rate")
+				desc := r.FormValue("description")
+				_, err := db.CreateEntry(u.ID, rate, desc)
+				if err != nil {
+					tpl.Error(w, err)
+				} else {
+					http.Redirect(w, r, "/entries", http.StatusFound)
+				}
+			default:
+				http.Error(w, "", http.StatusMethodNotAllowed)
+			}
+		})))
 
 	http.HandleFunc("/logout", func(w http.ResponseWriter, r *http.Request) {
 		auth.DestroySession(w)
