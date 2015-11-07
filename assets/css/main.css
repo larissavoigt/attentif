@@ -17,3 +17,15 @@ h1, .mdl-layout-title {
   color: white;
   text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
 }
+
+.mdl-layout__drawer i.material-icons {
+  vertical-align: bottom;
+}
+
+.mdl-layout__header-row .mdl-navigation {
+  font-size: 14px;
+}
+
+.mdl-layout__header-row .mdl-navigation i.material-icons {
+  vertical-align: middle;
+}
