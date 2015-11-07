@@ -1,6 +1,6 @@
 .centered{
-	margin: 0 auto;
 	text-align: center;
+	margin: auto;
 }
 
 .cast-text-shadow{
@@ -18,7 +18,12 @@ h1, .mdl-layout-title {
   text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
 }
 
+.top {
+	padding-top: 16px;
+	margin-top: 6px;
+}
 
+/* From Updates   */
 .mdl-layout__drawer i.material-icons {
   vertical-align: bottom;
 }
@@ -32,7 +37,6 @@ h1, .mdl-layout-title {
 }
 
 /* Controlls*/
-
 .moods {
 	background-repeat: no-repeat;
 	background-size: 5em 5em;
@@ -40,7 +44,7 @@ h1, .mdl-layout-title {
 	display: float;
 	padding: 0 0 0 2em;
 	border-radius: 0;
-	font-weight: bold; 
+	font-weight: bold;
 	font-size: 1.2em;
 }
 
@@ -124,8 +128,3 @@ h1, .mdl-layout-title {
 #control_tired {
    background-image: url("../imgs/tired.png");
 }
-
-
-
-
-
