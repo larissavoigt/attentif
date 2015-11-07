@@ -9,7 +9,7 @@ CREATE TABLE users(
   facebook_id VARCHAR(30) NOT NULL UNIQUE,
   token TEXT NOT NULL,
   name VARCHAR(255) NOT NULL,
-  INDEX(facebook_id))
+  INDEX(facebook_id)
 );
 
 CREATE TABLE entries(
@@ -18,5 +18,5 @@ CREATE TABLE entries(
   rate INT UNSIGNED NOT NULL,
   description TEXT,
   created_at TIMESTAMP NOT NULL,
-  FOREIGN KEY(user_id) REFERENCES users(id))
+  FOREIGN KEY(user_id) REFERENCES users(id)
 );
