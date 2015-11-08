@@ -61,6 +61,15 @@ h1, .mdl-layout-title {
 	width: 500px;
 }
 
+#index footer {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#index footer p {
+  font-size: .75em;
+}
+
 /* Controlls*/
 .moods {
 	background-repeat: no-repeat;
