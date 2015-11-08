@@ -10,8 +10,7 @@
 }
 
 .top {
-	padding-top: 16px;
-	margin-top: 6px;
+	margin-top: 20px;
 }
 
 /* GLOBAL */
@@ -204,4 +203,31 @@ h1.errors {
   font-family: 'Lobster Two', cursive;
   font-size: 60px;
   color: #E91E63;
+}
+
+/* STATISTICS */
+
+canvas {
+  margin: 20px;
+  width: 100%;
+  min-height: 400px;
+}
+
+#graph-distribution-legend ul {
+  list-style: none;
+  text-align: center;
+  -webkit-padding-start: 0;
+}
+
+#graph-distribution-legend ul li {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+#graph-distribution-legend span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
 }

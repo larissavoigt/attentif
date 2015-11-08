@@ -14,5 +14,17 @@ type Entry struct {
 }
 
 func (e *Entry) Timestamp() string {
-	return e.CreatedAt.Format("Jan 2, 3:04pm")
+	return e.CreatedAt.Local().Format("Jan 2, 3:04pm")
+}
+
+func GroupByRating(entries []Entry) []int {
+	r := make([]int, 11)
+	for _, e := range entries {
+		i := e.Rate % 10
+		if i == 0 && e.Rate == 100 {
+			i = 10
+		}
+		r[i]++
+	}
+	return r
 }

@@ -1,8 +1,10 @@
 package main
 
 import (
+	"encoding/json"
 	"flag"
 	"fmt"
+	"html/template"
 	"log"
 	"net/http"
 
@@ -10,6 +12,7 @@ import (
 
 	"github.com/dementiahackers/attentif/internal/auth"
 	"github.com/dementiahackers/attentif/internal/db"
+	"github.com/dementiahackers/attentif/internal/entry"
 	"github.com/dementiahackers/attentif/internal/templates"
 	"github.com/dementiahackers/attentif/internal/user"
 	"github.com/rs/xhandler"
@@ -102,6 +105,26 @@ func main() {
 		auth.SaveSession(w, demo_id)
 		http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
 	})
+
+	http.Handle("/stats/", c.Handler(
+		xhandler.HandlerFuncC(func(ctx context.Context, w http.ResponseWriter, r *http.Request) {
+			u := ctx.Value("user").(*user.User)
+
+			switch r.Method {
+			case "GET":
+				entries, err := db.FindEntries(u.ID, 30)
+				if err == nil {
+					json, err := json.Marshal(entry.GroupByRating(entries))
+					if err == nil {
+						tpl.Render(w, "stats", template.JS(json))
+						return
+					}
+				}
+				tpl.Error(w, err)
+			default:
+				http.Error(w, "", http.StatusMethodNotAllowed)
+			}
+		})))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method == "GET" {

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{template "head"}}
+    <title>Attentif - Statistics</title>
+  </head>
+  <body id="entries">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      {{template "header" }}
+      <script type="text/javascript" charset="utf-8">
+        var graphData = {{.}};
+      </script>
+      <main class="mdl-layout__content">
+        <div class="mdl-card mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-card mdl-shadow--8dp centered graph-cell top">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Feelings Distribution</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <canvas id="graph-distribution"></canvas>
+            <div id="graph-distribution-legend"></div>
+          </div>
+        </div>
+        <div class="mdl-card mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-card mdl-shadow--8dp centered graph-cell top">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Average rate by day</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <canvas id="graph-avg"></canvas>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
