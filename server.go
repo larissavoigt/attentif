@@ -122,7 +122,10 @@ func main() {
 						entry.FeelingsDistribution(entries),
 						entry.RateByDay(entries),
 					}
-
+					if len(entries) == 0 {
+						tpl.Render(w, "entries", entries)
+						return
+					}
 					json, err := json.Marshal(p)
 					if err == nil {
 						tpl.Render(w, "stats", template.JS(json))
