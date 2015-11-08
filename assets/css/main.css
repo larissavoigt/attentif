@@ -100,6 +100,9 @@ h1, .mdl-layout-title {
 }
 
 /* Controlls*/
+#output_happiness{
+	padding: 0 0 0.7em 0;
+}
 .moods {
 	background-repeat: no-repeat;
 	background-size: 5em 5em;
