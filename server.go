@@ -142,7 +142,7 @@ func main() {
 				http.Redirect(w, r, "/entries/new", 302)
 			} else {
 				p := struct {
-					facebookurl string
+					FacebookURL string
 				}{
 					auth.RedirectURL(),
 				}
