@@ -204,9 +204,10 @@ h1, .mdl-layout-title {
 
 #entries a.add-entry {
   max-width: 200px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   will-change: inherit;
 }
+
 
 /* ERRORS */
 
@@ -241,6 +242,11 @@ canvas {
   width: 10px;
   height: 10px;
   margin-right: 5px;
+}
+
+#stats .mdl-card .mdl-card__supporting-text {
+  padding: 0;
+  overflow: initial;
 }
 
 /* FEELINGS */
