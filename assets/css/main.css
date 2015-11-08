@@ -85,6 +85,15 @@ h1, .mdl-layout-title {
   font-size: .75em;
 }
 
+#index footer a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#index footer a#logomaker {
+  margin: 0;
+}
+
 /* Controlls*/
 .moods {
 	background-repeat: no-repeat;
