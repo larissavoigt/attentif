@@ -21,6 +21,11 @@ body {
 }
 
 /* HEADER */
+
+.mdl-layout__header {
+  margin-bottom: 20px;
+}
+
 h1, .mdl-layout-title {
   font-family: 'Lobster Two', cursive;
   font-size: 28px;
@@ -164,3 +169,9 @@ h1, .mdl-layout-title {
    background-image: url("../imgs/tired.png");
 }
 */
+
+/* ENTRIES */
+
+#entries table {
+  width: 100%;
+}
