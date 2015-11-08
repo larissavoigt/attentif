@@ -98,6 +98,10 @@ func main() {
 		http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
 	})
 
+	http.HandleFunc("/about", func(w http.ResponseWriter, r *http.Request) {
+		tpl.Render(w, "about", nil)
+	})
+
 	http.HandleFunc("/demo", func(w http.ResponseWriter, r *http.Request) {
 		auth.SaveSession(w, demo_id)
 		http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
