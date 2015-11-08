@@ -284,3 +284,9 @@ canvas {
 .feeling-sad {
   border-color: #5c6bc0;
 }
+
+.right_align
+{
+	float: right;
+	clear: both;
+}
