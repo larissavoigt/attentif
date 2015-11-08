@@ -118,11 +118,12 @@ h1, .mdl-layout-title {
 	margin-left: 1em;
 }
 
-/*
-#control_angry {
-   background-image: url("../imgs/angry.png");
-}
 
+.control_angry {
+   background-image: url(../imgs/angry.png);
+	 margin-left: 1.5em;
+}
+/*
 #control_apathy {
    background-image: url("../imgs/apathy.png");
 }
