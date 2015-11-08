@@ -42,6 +42,8 @@ function update_happiness(){
 		output_happiness.innerHTML = "Delighted";
 	}
 	
+	output_happiness.innerHTML += ": " + control_happiness.value + "%";
+	
 	if(control_happiness.value >=50){
 		green = 255;
 		red = lerp(255, 0, control_happiness.value/50) + 255;
