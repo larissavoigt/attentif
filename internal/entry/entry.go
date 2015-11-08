@@ -17,6 +17,16 @@ func (e *Entry) Timestamp() string {
 	return e.CreatedAt.Local().Format("Jan 2, 3:04pm")
 }
 
+func (e *Entry) Feeling() string {
+	if e.Rate < 33 {
+		return "sad"
+	} else if e.Rate < 66 {
+		return "neutral"
+	} else {
+		return "happy"
+	}
+}
+
 func GroupByRating(entries []Entry) []int {
 	r := make([]int, 11)
 	for _, e := range entries {
