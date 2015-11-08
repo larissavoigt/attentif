@@ -13,9 +13,9 @@
 	margin-top: 20px;
 }
 
-.buttons {
+.sleeping-button {
 	display: table-cell;
-	margin: auto;
+	width: 200px;
 }
 
 /* GLOBAL */
