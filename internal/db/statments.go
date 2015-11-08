@@ -11,6 +11,7 @@ const queryEntries = `
 	FROM entries
 	WHERE user_id = ?
 	ORDER BY id DESC
+	LIMIT ?
 `
 
 const insertEntry = `

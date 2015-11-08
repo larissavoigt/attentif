@@ -74,7 +74,7 @@ func CreateEntry(id int64, rate, desc string) (string, error) {
 
 func FindEntries(id int64) ([]entry.Entry, error) {
 	var entries []entry.Entry
-	rows, err := db.Query(queryEntries, id)
+	rows, err := db.Query(queryEntries, id, 20)
 	if err != nil {
 		return entries, err
 	}

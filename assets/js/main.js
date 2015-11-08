@@ -54,7 +54,8 @@ function avgGraph() {
   {
     scaleShowGridLines : false,
     pointDotRadius : 8,
-    pointDotStrokeWidth : 5
+    pointDotStrokeWidth : 5,
+    pointHitDetectionRadius: 1
   }
   );
 }
