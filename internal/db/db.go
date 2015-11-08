@@ -72,9 +72,9 @@ func CreateEntry(id int64, rate, desc string) (string, error) {
 	return strconv.FormatInt(e, 10), nil
 }
 
-func FindEntries(id int64) ([]entry.Entry, error) {
+func FindEntries(id int64, limit int) ([]entry.Entry, error) {
 	var entries []entry.Entry
-	rows, err := db.Query(queryEntries, id, 20)
+	rows, err := db.Query(queryEntries, id, limit)
 	if err != nil {
 		return entries, err
 	}

@@ -68,7 +68,7 @@ func main() {
 			case "GET":
 				switch r.URL.Path[len("/entries/"):] {
 				case "":
-					entries, err := db.FindEntries(u.ID)
+					entries, err := db.FindEntries(u.ID, 200)
 					if err != nil {
 						tpl.Error(w, err)
 					} else {
@@ -113,7 +113,7 @@ func main() {
 
 			switch r.Method {
 			case "GET":
-				entries, err := db.FindEntries(u.ID)
+				entries, err := db.FindEntries(u.ID, 10)
 				if err == nil {
 					p := struct {
 						Distribution map[string]int
