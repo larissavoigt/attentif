@@ -48,11 +48,12 @@ h1, .mdl-layout-title {
 	font-size: 1.2em;
 }
 
-#control_happy {
-	background-image: url("../imgs/happy.png");
+.control_happy {
+	background-image: url(../imgs/happy.png);
 	margin-left: 1em;
 }
 
+/*
 #control_angry {
    background-image: url("../imgs/angry.png");
 }
@@ -128,3 +129,4 @@ h1, .mdl-layout-title {
 #control_tired {
    background-image: url("../imgs/tired.png");
 }
+*/
