@@ -12,9 +12,9 @@
 		<main class="mdl-layout__content">
 			<div class="page-content"><!-- Your content goes here -->
 
-	<div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-tablet mdl-card mdl-shadow--8dp centered top">
+	<div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-tablet mdl-card mdl-shadow--8dp centered">
     <h4 class="title-text">Hi {{.FirstName}}, how are you feeling now?</h4>
-				<div class="supporting-text">
+				<div class="mdl-cell--8-col mdl-cell--7-col-tablet supporting-text centered">
 					<!-- The slider that allows the user to select how happy he or she is-->
 					<div id="output_happiness" class="centered cast-text-shadow"></div>
 					<input id="control_happiness" class="mdl-slider mdl-js-slider centered" type="range" min="0" max="100" value="50" tabindex="0" oninput="update_happiness();"/>
@@ -27,7 +27,7 @@
 			<form action="#">
 			  <div  id="output_text" class="mdl-cell--6-col mdl-cell--5-col-tablet mdl-textfield mdl-js-textfield">
 			    <textarea class="mdl-textfield__input text-control" type="text" rows= "5" id="control_text" ></textarea>
-			    <label class="mdl-textfield__label " for="sample5">Write something...</label>
+			    <label class="mdl-textfield__label " for="control_text">Write something...</label>
 			  </div>
 			</form>
 		</div>
