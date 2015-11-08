@@ -13,9 +13,8 @@
 	margin-top: 20px;
 }
 
-.sleeping-button {
-	display: table-cell;
-	width: 200px;
+.text-control {
+	font-size: x-large;
 }
 
 /* GLOBAL */
