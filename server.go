@@ -20,8 +20,8 @@ import (
 const demo_id = "1"
 
 var (
-	domain = flag.String("domain", "http://74.14.7.103", "Site domain")
-	port   = flag.String("port", "3000", "Server port")
+	domain = flag.String("domain", "http://localhost", "Site domain")
+	port   = flag.String("port", "8080", "Server port")
 	client = flag.String("facebook-id", "1522378854752474", "Facebook Client ID")
 	secret = flag.String("facebook-secret", "ec04d5b98a928fbd02df51574e4d48dd", "Facebook Client Secret")
 )
