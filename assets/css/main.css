@@ -109,98 +109,94 @@ h1, .mdl-layout-title {
 }
 .moods {
 	background-repeat: no-repeat;
-	background-size: 5em 5em;
-	width:6em; height:6em;
-	display: float;
+	background-size: 2.1em 2.1em;
+	width:4em; height:4em;;
 	padding: 0 0 0 2em;
 	border-radius: 0;
 	font-weight: bold;
-	font-size: 1.2em;
+	font-size: 1.0em;
 }
 
 .control_happy {
 	background-image: url(../imgs/happy.png);
-	margin-left: 1em;
 }
 
 
 .control_angry {
    background-image: url(../imgs/angry.png);
-	 margin-left: 1.5em;
-}
-/*
-#control_apathy {
-   background-image: url("../imgs/apathy.png");
 }
 
-#control_bored {
-   background-image: url("../imgs/bored.png");
+.control_apathy {
+   background-image: url(../imgs/apathy.png);
 }
 
-#control_confident {
-   background-image: url("../imgs/confident.png");
+.control_bored {
+   background-image: url(../imgs/bored.png);
 }
 
-#control_confused {
-   background-image: url("../imgs/confused.png");
+.control_confident {
+   background-image: url(../imgs/confident.png);
 }
 
-#control_embarrassed {
-   background-image: url("../imgs/embarrassed.png");
+.control_confused {
+   background-image: url(../imgs/confused.png);
 }
 
-#control_entertained {
-   background-image: url("../imgs/entertained.png");
+.control_embarrassed {
+   background-image: url(../imgs/embarrassed.png);
 }
 
-#control_euphoria {
-   background-image: url("../imgs/euphoria.png");
+.control_entertained {
+   background-image: url(../imgs/entertained.png);
 }
 
-#control_excited {
-   background-image: url("../imgs/excited.png");
+.control_euphoria {
+   background-image: url(../imgs/euphoria.png);
 }
 
-#control_frustrated {
-   background-image: url("../imgs/frustrated.png");
+.control_excited {
+   background-image: url(../imgs/excited.png);
 }
 
-#control_hopefull {
-   background-image: url("../imgs/hopefull.png");
+.control_frustrated {
+   background-image: url(../imgs/frustrated.png);
 }
 
-#control_joyful {
-   background-image: url("../imgs/joyful.png");
+.control_hopefull {
+   background-image: url(../imgs/hopefull.png);
 }
 
-#control_lost {
-   background-image: url("../imgs/lost.png");
+.control_joyful {
+   background-image: url(../imgs/joyful.png);
 }
 
-#control_optimistic {
-   background-image: url("../imgs/optimistic.png");
+.control_lost {
+   background-image: url(../imgs/lost.png);
 }
 
-#control_peacefull {
-   background-image: url("../imgs/peacefull.png");
+.control_optimistic {
+   background-image: url(../imgs/optimistic.png);
 }
 
-#control_sad {
-   background-image: url("../imgs/sad.png");
+.control_peacefull {
+   background-image: url(../imgs/peacefull.png);
 }
 
-#control_shoked {
-   background-image: url("../imgs/shoked.png");
+.control_sad {
+   background-image: url(../imgs/sad.png);
 }
 
-#control_sleepy {
-   background-image: url("../imgs/sleepy.png");
+.control_shoked {
+   background-image: url(../imgs/shoked.png);
 }
 
-#control_tired {
-   background-image: url("../imgs/tired.png");
+.control_sleepy {
+   background-image: url(../imgs/sleepy.png);
 }
-*/
+
+.control_tired {
+   background-image: url(../imgs/tired.png);
+}
 
 /* ENTRIES */
 
