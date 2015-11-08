@@ -11,7 +11,6 @@
         var stats = {{.}};
       </script>
       <main class="mdl-layout__content">
-        {{ if .Any }}
         <div class="mdl-card mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-card mdl-shadow--8dp centered graph-cell top">
           <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Feelings Distribution</h2>
@@ -29,13 +28,6 @@
             <canvas id="graph-avg"></canvas>
           </div>
         </div>
-        {{ else }}
-          <h3>There are no entries yet!</h3>
-          <a href="/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent add-entry">
-            <i class="material-icons" role="presentation">add</i>
-              Add Entry
-          </a>
-        {{end}}
       </main>
     </div>
   </body>
