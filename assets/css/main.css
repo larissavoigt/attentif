@@ -289,3 +289,7 @@ canvas {
 	float: right;
 	clear: both;
 }
+
+.button_down{
+	padding-bottom: 40px;
+}
