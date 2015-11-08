@@ -13,6 +13,10 @@
 	margin-top: 20px;
 }
 
+.buttons {
+	display: table-cell;
+}
+
 /* GLOBAL */
 
 body {
