@@ -48,6 +48,10 @@ func FeelingsDistribution(entries []Entry) map[string]int {
 
 func RateByDay(entries []Entry) RateStats {
 	var stats RateStats
+	if len(entries) == 0 {
+		return stats
+	}
+
 	i := -1
 	current := 0
 	count := 0
