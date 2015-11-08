@@ -21,7 +21,7 @@ func Config(domain, port, client, secret string) {
 		Endpoint:     facebook.Endpoint,
 		ClientID:     client,
 		ClientSecret: secret,
-		RedirectURL:  fmt.Sprintf("%s:%s/auth", domain, port),
+		RedirectURL:  fmt.Sprintf("%s:%s/auth", domain, ""),
 	}
 }
 

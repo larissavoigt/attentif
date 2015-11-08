@@ -13,6 +13,11 @@ type Entry struct {
 	CreatedAt   time.Time
 }
 
+type RateStats struct {
+	Days []string
+	Rate []int
+}
+
 func (e *Entry) Timestamp() string {
 	return e.CreatedAt.Local().Format("Jan 2, 3:04pm")
 }
@@ -27,7 +32,7 @@ func (e *Entry) Feeling() string {
 	}
 }
 
-func FeelingsDistribution(entries Entry) []int {
+func FeelingsDistribution(entries []Entry) map[string]int {
 	distribution := map[string]int{
 		"sad":     0,
 		"neutral": 0,
@@ -35,8 +40,45 @@ func FeelingsDistribution(entries Entry) []int {
 	}
 
 	for _, e := range entries {
-		distribution[e.Feeling]++
+		distribution[e.Feeling()]++
 	}
 
 	return distribution
+}
+
+func RateByDay(entries []Entry) RateStats {
+	var stats RateStats
+	i := -1
+	current := 0
+	count := 0
+
+	for _, e := range entries {
+		key := e.CreatedAt.Local().Format("01/02")
+		if i >= 0 {
+			c := stats.Days[i]
+			if key == c {
+				current += int(e.Rate)
+				count++
+			} else {
+				current += int(e.Rate)
+				count++
+				stats.Rate[i] = current / count
+				stats.Days = append(stats.Days, key)
+				stats.Rate = append(stats.Rate, 0)
+				current = 0
+				count = 0
+				i++
+			}
+		} else {
+			i++
+			stats.Days = append(stats.Days, key)
+			stats.Rate = append(stats.Rate, 0)
+			current = int(e.Rate)
+			count = 1
+		}
+	}
+
+	stats.Rate[i] = current
+
+	return stats
 }

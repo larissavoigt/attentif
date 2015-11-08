@@ -10,19 +10,19 @@ function distributionGraph() {
   var ctx = chart.getContext("2d");
   var graph = new Chart(ctx).Doughnut([
       {
-        value: 50,
+        value: stats.Distribution.happy,
         color: "#ffc107",
         highlight: "#ffb300",
         label: "Happy"
       },
       {
-        value: 100,
+        value: stats.Distribution.neutral,
         color: "#4db6ac",
         highlight: "#009688",
         label: "Neutral"
       },
       {
-        value: 300,
+        value: stats.Distribution.sad,
         color:"#5c6bc0",
         highlight: "#3f51b5",
         label: "Sad"
@@ -37,7 +37,7 @@ function avgGraph() {
   var legend = document.getElementById("graph-avg-legend");
   var ctx = chart.getContext("2d");
   var graph = new Chart(ctx).Line({
-    labels: ["10/01", "10/02", "10/04", "10/08", "10/9", "10/10", "10/12"],
+    labels: stats.Rate.Days,
     datasets: [
     {
       label: "Ratings",
@@ -47,7 +47,7 @@ function avgGraph() {
       pointStrokeColor: "#4caf50",
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(220,220,220,1)",
-      data: [65, 59, 80, 81, 56, 55, 40]
+      data: stats.Rate.Rate
     }
     ]
   },
