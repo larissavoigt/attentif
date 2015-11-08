@@ -9,6 +9,7 @@
       <main class="mdl-layout__content">
       <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-card mdl-shadow--8dp centered">
+          {{ if . }}
           <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
             <thead>
               <tr>
@@ -29,6 +30,13 @@
               {{ end }}
             </tbody>
           </table>
+          {{ else }}
+            <h3>There is no entries yet!</h3>
+            <a href="/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent add-entry">
+              <i class="material-icons" role="presentation">add</i>
+              Add Entry
+            </a>
+          {{ end }}
         </div>
       </div>
       </main>

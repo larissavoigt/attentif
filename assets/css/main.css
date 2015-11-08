@@ -18,6 +18,11 @@
 
 body {
   background-color: #e1f5fe;
+  color: #666;
+}
+
+.mdl-button.mdl-button--colored {
+  color: white;
 }
 
 /* HEADER */
@@ -180,6 +185,17 @@ h1, .mdl-layout-title {
 
 #entries table {
   width: 100%;
+}
+
+#entries h3 {
+  margin-top: 50px;
+  font-size: 2em;
+}
+
+#entries a.add-entry {
+  max-width: 200px;
+  margin: 0 auto;
+  will-change: inherit;
 }
 
 /* ERRORS */
