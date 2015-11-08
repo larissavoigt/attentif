@@ -34,9 +34,7 @@ func CreateUser(token string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	res, err := db.Exec(`INSERT INTO users (facebook_id, token, name)
-	VALUES(?, ?, ?) ON DUPLICATE KEY UPDATE
-	token=VALUES(token), name=VALUES(name)`, user.ID, token, user.Name)
+	res, err := db.Exec(insertUser, user.ID, token, user.Name)
 	if err != nil {
 		return "", err
 	}
@@ -63,8 +61,7 @@ func CreateEntry(id int64, rate, desc string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	res, err := db.Exec(`INSERT INTO entries (user_id, rate, description, created_at)
-	VALUES(?, ?, ?, ?)`, id, n, desc, time.Now())
+	res, err := db.Exec(insertEntry, id, n, desc, time.Now())
 	if err != nil {
 		return "", err
 	}
@@ -75,9 +72,9 @@ func CreateEntry(id int64, rate, desc string) (string, error) {
 	return strconv.FormatInt(e, 10), nil
 }
 
-func FindEntries(id int64, count int) ([]entry.Entry, error) {
+func FindEntries(id int64) ([]entry.Entry, error) {
 	var entries []entry.Entry
-	rows, err := db.Query("select id, rate, description, created_at from entries where user_id = ? ORDER BY id DESC LIMIT ?", id, count)
+	rows, err := db.Query(queryEntries, id)
 	if err != nil {
 		return entries, err
 	}

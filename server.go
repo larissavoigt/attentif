@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"flag"
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -67,10 +66,9 @@ func main() {
 
 			switch r.Method {
 			case "GET":
-
 				switch r.URL.Path[len("/entries/"):] {
 				case "":
-					entries, err := db.FindEntries(u.ID, 20)
+					entries, err := db.FindEntries(u.ID)
 					if err != nil {
 						tpl.Error(w, err)
 					} else {
@@ -79,9 +77,8 @@ func main() {
 				case "new":
 					tpl.Render(w, "home", u)
 				default:
-					fmt.Fprintf(w, "missing!")
+					tpl.NotFound(w)
 				}
-
 			case "POST":
 				rate := r.FormValue("rate")
 				desc := r.FormValue("description")
@@ -112,7 +109,7 @@ func main() {
 
 			switch r.Method {
 			case "GET":
-				entries, err := db.FindEntries(u.ID, 30)
+				entries, err := db.FindEntries(u.ID)
 				if err == nil {
 					json, err := json.Marshal(entry.GroupByRating(entries))
 					if err == nil {
