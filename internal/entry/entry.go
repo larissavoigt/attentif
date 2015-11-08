@@ -27,14 +27,16 @@ func (e *Entry) Feeling() string {
 	}
 }
 
-func GroupByRating(entries []Entry) []int {
-	r := make([]int, 11)
-	for _, e := range entries {
-		i := e.Rate % 10
-		if i == 0 && e.Rate == 100 {
-			i = 10
-		}
-		r[i]++
+func FeelingsDistribution(entries Entry) []int {
+	distribution := map[string]int{
+		"sad":     0,
+		"neutral": 0,
+		"happy":   0,
 	}
-	return r
+
+	for _, e := range entries {
+		distribution[e.Feeling]++
+	}
+
+	return distribution
 }

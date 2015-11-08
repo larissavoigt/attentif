@@ -111,7 +111,13 @@ func main() {
 			case "GET":
 				entries, err := db.FindEntries(u.ID)
 				if err == nil {
-					json, err := json.Marshal(entry.GroupByRating(entries))
+					p := struct {
+						distribution map[string]int
+					}{
+						entry.FeelingsDistribution(entries),
+					}
+
+					json, err := json.Marshal(p)
 					if err == nil {
 						tpl.Render(w, "stats", template.JS(json))
 						return
@@ -134,7 +140,7 @@ func main() {
 				http.Redirect(w, r, "/entries/new", 302)
 			} else {
 				p := struct {
-					FacebookURL string
+					facebookurl string
 				}{
 					auth.RedirectURL(),
 				}
