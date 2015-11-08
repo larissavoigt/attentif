@@ -7,13 +7,15 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       {{template "header" }}
       <main class="mdl-layout__content">
-      <div class="page-content">
+      <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-card mdl-shadow--8dp centered">
         <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
           <thead>
             <tr>
               <th class="mdl-data-table__cell--non-numeric">Date</th>
               <th>Rating</th>
               <th>Description</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -22,10 +24,12 @@
               <td class="mdl-data-table__cell--non-numeric">{{.Timestamp}}</td>
               <td>{{.Rate}}</td>
               <td class="mdl-data-table__cell--non-numeric">{{.Description.Value}}</td>
+              <td></td>
             </tr>
             {{ end }}
           </tbody>
         </table>
+      </div>
       </div>
       </main>
     </div>
