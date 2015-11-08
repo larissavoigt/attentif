@@ -75,7 +75,7 @@ func main() {
 						tpl.Render(w, "entries", entries)
 					}
 				case "new":
-					tpl.Render(w, "home", u)
+					tpl.Render(w, "new_entry", u)
 				default:
 					tpl.NotFound(w)
 				}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{template "head"}}
+  </head>
+
+  <body id="new-entry">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      {{template "header" }}
+      <main class="mdl-layout__content">
+      <div class="page-content">
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-tablet mdl-card mdl-shadow--8dp centered">
+          <form action="/entries/new" method="post">
+          <h4 class="title-text">Hi {{.FirstName}}, how are you feeling?</h4>
+          <div class="mdl-cell--8-col mdl-cell--7-col-tablet supporting-text centered">
+            <div id="rate-label" class="centered">OK</div>
+            <input id="rate" name="rate" class="mdl-slider mdl-js-slider centered" type="range" min="0" max="100" value="50" tabindex="0">
+          </div>
+            <div id="output_text" class="mdl-cell--7-col mdl-cell--6-col-tablet mdl-textfield mdl-js-textfield">
+              <textarea class="mdl-textfield__input text_size" type="text" rows= "5" id="control_text" name="description"></textarea>
+              <label class="mdl-textfield__label " for="control_text">Write something...</label>
+            </div>
+            <div class="centered">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">
+                <i class="material-icons" role="presentation">add</i>
+                Add Entry
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      </main>
+    </div>
+  </body>
+</html>

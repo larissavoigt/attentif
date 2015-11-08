@@ -293,3 +293,11 @@ canvas {
 .button_down{
 	padding-bottom: 40px;
 }
+
+/* NEW ENTRY */
+#new-entry button {
+  margin-bottom: 20px;
+}
+#rate-label {
+  margin: 30px 0 20px;
+}

@@ -1,6 +1,7 @@
 window.addEventListener("load", function() {
   distributionGraph();
   avgGraph();
+  happinessSlider();
 });
 
 function distributionGraph() {
@@ -58,4 +59,31 @@ function avgGraph() {
     pointHitDetectionRadius: 1
   }
   );
+}
+
+function happinessSlider() {
+  var el = document.getElementById("rate");
+  var name = document.getElementById("rate-label");
+  var ranges = {
+    5: 'Desperately Unhappy',
+    15: 'Very Unhappy',
+    25: 'Unhappy',
+    35: 'Passable',
+    45: 'Quite OK',
+    55: 'OK',
+    65: 'Content',
+    75: 'Cheerful',
+    85: 'Happy',
+    95: 'Delighted',
+    100: 'Blissful'
+  };
+  el.addEventListener("input", function(e) {
+    var val = parseInt(el.value, 10);
+    for (var i in ranges) {
+      if (val <= i) {
+        name.innerHTML = ranges[i];
+        break;
+      }
+    }
+  });
 }
