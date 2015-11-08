@@ -174,4 +174,11 @@ h1, .mdl-layout-title {
 
 #entries table {
   width: 100%;
+
+/* ERRORS */
+
+h1.errors {
+  font-family: 'Lobster Two', cursive;
+  font-size: 60px;
+  color: #E91E63;
 }

@@ -2,9 +2,27 @@
 <html>
   <head>
     {{template "head"}}
-    <title>Attentif - Helping Individuals with dementia record their days</title>
+    <title>Attentif - Internal Server Error</title>
   </head>
-  <body>
-    {{.}}
+  <body id="index">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <main class="mdl-layout__content">
+      <div class="page-content">
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-grid">
+          <div class="mdl-card mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-shadow--2dp centered">
+            <div class="mdl-card__supporting-text">
+              <div class="centered">
+                <h1 class="errors">Attentif</h1>
+                <h3>Oops, something went wrong!</h2>
+                <h5>{{.Error}}</h3>
+                <h6>Talk to one of the developers - we are close to the stage!</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </main>
+    </div>
   </body>
 </html>
