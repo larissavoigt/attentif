@@ -87,7 +87,6 @@ h1, .mdl-layout-title {
 
 #index footer p {
   font-size: .75em;
-  text-align: center;
 }
 
 #index footer a {
@@ -99,31 +98,29 @@ h1, .mdl-layout-title {
   margin: 0;
 }
 
-#index p {
-  text-align: left;
-}
-
 /* Controlls*/
 #output_happiness{
 	padding: 0 0 0.7em 0;
 }
 .moods {
-	background-repeat: no-repeat;
-	background-size: 2.1em 2.1em;
-	width:4em; height:4em;;
-	padding: 0 0 0 2em;
-	border-radius: 0;
-	font-weight: bold;
-	font-size: 1.0em;
+    background-repeat: no-repeat;
+    background-size: 2.1em 2.1em;
+    width:4em; height:4em;
+    padding: 0 0 0 2em;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .control_happy {
-	background-image: url(../imgs/happy.png);
+    background-image: url(../imgs/happy.png);
+
 }
 
 
 .control_angry {
    background-image: url(../imgs/angry.png);
+
 }
 
 .control_apathy {
@@ -197,6 +194,7 @@ h1, .mdl-layout-title {
 .control_tired {
    background-image: url(../imgs/tired.png);
 }
+
 
 /* ENTRIES */
 
@@ -291,4 +289,3 @@ canvas {
 	float: right;
 	clear: both;
 }
-
