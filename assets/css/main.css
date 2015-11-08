@@ -61,9 +61,15 @@ h1, .mdl-layout-title {
   padding: 40px;
 }
 
+#index img#logo {
+  width: 100%;
+  max-width: 763px;
+}
+
 #index .fb_bt img{
+  width: 100%;
+  max-width: 293px;
   margin: 20px 0 5px;
-	width: 500px;
 }
 
 #index footer {
