@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/dementiahackers/attentif/internal/entry"
-	"github.com/dementiahackers/attentif/internal/user"
+	"github.com/larissavoigt/attentif/entry"
+	"github.com/larissavoigt/attentif/user"
 )
 import _ "github.com/go-sql-driver/mysql"
 

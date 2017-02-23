@@ -9,11 +9,11 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/dementiahackers/attentif/internal/auth"
-	"github.com/dementiahackers/attentif/internal/db"
-	"github.com/dementiahackers/attentif/internal/entry"
-	"github.com/dementiahackers/attentif/internal/templates"
-	"github.com/dementiahackers/attentif/internal/user"
+	"github.com/larissavoigt/attentif/auth"
+	"github.com/larissavoigt/attentif/db"
+	"github.com/larissavoigt/attentif/entry"
+	"github.com/larissavoigt/attentif/templates"
+	"github.com/larissavoigt/attentif/user"
 	"github.com/rs/xhandler"
 )
 

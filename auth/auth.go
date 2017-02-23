@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/dementiahackers/attentif/internal/db"
-	"github.com/dementiahackers/attentif/internal/user"
+	"github.com/larissavoigt/attentif/db"
+	"github.com/larissavoigt/attentif/user"
 	"github.com/rs/xhandler"
 
 	"golang.org/x/net/context"
