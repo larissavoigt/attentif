@@ -32,7 +32,7 @@ func init() {
 
 func main() {
 	auth.Config(*domain, *port, *client, *secret)
-	tpl := templates.New("templates")
+	tpl := templates.New("html")
 
 	// chain authenticated middleware
 	c := xhandler.Chain{}
@@ -160,5 +160,6 @@ func main() {
 		}
 	})
 
+  log.Printf("Listening on port %s\n", *port)
 	log.Fatal(http.ListenAndServe(":"+*port, nil))
 }
